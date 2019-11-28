@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{tikz}
+
+\title{総合分析情報学 解答}
+\author{ぴかちゅう}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Q1}
+\subsection*{(1)}
+行列\(A\)の固有値と固有ベクトルを求めます.ただし\(0 < \theta < \pi\)
+\[
+    A = \begin{pmatrix}
+        \cos \theta & 0 & \sin 0      \\
+        -1          & 1 & -1          \\
+        \sin \theta & 0 & \cos \theta
+    \end{pmatrix}
+\]
+
+固有値を求めるアルゴリズムは次の通りです\\
+
+\begin{enumerate}
+    \item 行列$A$の固有方程式を立てます
+    \item 方程式を解いて固有値を求めます
+    \item 固有値を固有ベクトルを求める式に代入します
+\end{enumerate}
+
+実際にやってみます\\
+
+まずは固有方程式を立てます.固有値を$\lambda$とします.そうすると得られる固有方程式は次のようになります
+
+$$
+    |\lambda E - A| = 0\\
+$$
+
+これに単位行列$E$と与えられた行列$A$を代入すると
+
+$$
+    \left(
+    \begin{array}{ccc}
+            \lambda - \cos \theta & 0           & \sin \theta           \\
+            1                     & \lambda - 1 & 1                     \\
+            - \sin \theta         & 0           & \lambda - \cos \theta
+        \end{array}
+    \right) = 0
+$$
+
+この行列式を計算すると
+
+$$
+    (\lambda - \cos \theta)^2(\lambda - 1) = 0
+$$
+
+よって$\lambda = 1, \cos \theta$となります\\
+
+次に固有ベクトルを求めます.固有ベクトルは
+
+$$
+(\lambda E - A)\bm{x} = 0
+$$
+
+に固有値を代入して$\bm{x}$について解くことで求まります
+
+$\lambda = \cos \theta$を代入すると
+
+$$
+
+$$
+
+\subsection*{(2)}
+\subsection*{(3)}
+\subsubsection*{1}
+\end{document}
